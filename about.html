@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-GB" data-input="keyboard">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title>About me</title>
+        <meta name="theme-color" content="#000000" />
+        <link
+            rel="stylesheet"
+            href="stylesheet/src-JO0wfAI6_quCm.css"
+        />
+    </head>
+    <body>
+        <style>
+            /* always use light text, since the background is black */
+            :root {
+                color-scheme: dark;
+                --bg: #000;
+                --fg: #f6f7f5;
+                --muted: #f6f7f599;
+                --grid: #f6f7f512;
+                --grid-hi: #f6f7f552;
+            }
+            body { background-color: #000; }
+            /* keep the social icons readable over the video */
+            footer nav a { color: var(--fg); }
+            footer nav svg { filter: drop-shadow(0 0 1px #000) drop-shadow(0 1px 3px rgb(0 0 0 / .8)); }
+            #root { position: relative; z-index: 1; }
+            #bg-video {
+                position: fixed;
+                inset: 0;
+                z-index: 0;
+                background: #000;
+                pointer-events: none;
+                overflow: hidden;
+            }
+            /* video band: 25% black margin on every side, aspect ratio kept, centred */
+            #bg-video .band {
+                position: absolute;
+                top: 25vh;
+                bottom: 25vh;
+                left: 25vw;
+                right: 25vw;
+                display: grid;
+                place-items: center;
+            }
+            #bg-video video {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            /* centre everything */
+            main { text-align: center; }
+            main h1, main footer { justify-content: center; }
+            main p { margin-inline: auto; }
+        </style>
+        <div id="root">
+            <main
+                class="mx-auto w-full max-w-[520px] px-[max(1rem,env(safe-area-inset-left))] pt-8 pb-[calc(4rem+env(safe-area-inset-bottom))] sm:pt-14"
+            >
+                <a
+                    href="index.html"
+                    class="label text-muted transition-colors hover:text-fg focus-visible:text-fg"
+                    >← Back</a
+                >
+
+                <h1
+                    class="my-18 flex items-center gap-4 text-[clamp(30px,8vw,40px)] leading-none font-normal tracking-[-.02em] lg:my-16"
+                >
+                <span class="font-display text-[1.1em] tracking-normal text-muted">About me</span>
+                </h1>
+
+                <p class="mb-14 max-w-[30em] text-[19px] leading-[1.4] sm:text-[21px]">
+                    I'm a second year student at RIT studying Audiovisual Design through the Individualized Study
+                    program.
+                </p>
+
+                <p class="mb-14 max-w-[30em] text-[17px] leading-[1.5]">
+                    I work on collaborative student film sets and specialize in post-production work with Adobe
+                    Suite. I have a strong understanding of motion graphics and 2D composite creation, and I enjoy
+                    experimenting with color, texture, and type.
+
+                    I am deeply curious about anything creative! ☘️🦉
+                </p>
+
+                <footer class="flex items-center justify-between gap-4 text-muted">
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>
