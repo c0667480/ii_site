@@ -51,14 +51,22 @@
                 height: 100%;
                 object-fit: contain;
             }
-            /* centre everything */
-            main { text-align: center; }
-            main h1, main footer { justify-content: center; }
-            main p { margin-inline: auto; }
+            /* centre everything, vertically and horizontally; equal 3.5rem gaps between the back link and each block of text */
+            main.about-main {
+                min-height: 100svh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3.5rem;
+                text-align: center;
+                padding-block: 2rem;
+            }
+            main.about-main p { margin: 0; }
         </style>
         <div id="root">
             <main
-                class="mx-auto w-full max-w-[520px] px-[max(1rem,env(safe-area-inset-left))] pt-8 pb-[calc(4rem+env(safe-area-inset-bottom))] sm:pt-14"
+                class="about-main mx-auto w-full max-w-[520px] px-[max(1rem,env(safe-area-inset-left))]"
             >
                 <a
                     href="index.html"
@@ -66,18 +74,14 @@
                     >← Back</a
                 >
 
-                <h1
-                    class="my-18 flex items-center gap-4 text-[clamp(30px,8vw,40px)] leading-none font-normal tracking-[-.02em] lg:my-16"
-                >
-                <span class="font-display text-[1.1em] tracking-normal text-muted">About me</span>
-                </h1>
 
-                <p class="mb-14 max-w-[30em] text-[19px] leading-[1.4] sm:text-[21px]">
+
+                <p class="max-w-[30em] text-[19px] leading-[1.4] sm:text-[21px]">
                     I'm a second year student at RIT studying Audiovisual Design through the Individualized Study
                     program.
                 </p>
 
-                <p class="mb-14 max-w-[30em] text-[17px] leading-[1.5]">
+                <p class="max-w-[30em] text-[17px] leading-[1.5]">
                     I work on collaborative student film sets and specialize in post-production work with Adobe
                     Suite. I have a strong understanding of motion graphics and 2D composite creation, and I enjoy
                     experimenting with color, texture, and type.
@@ -85,8 +89,6 @@
                     I am deeply curious about anything creative! ☘️🦉
                 </p>
 
-                <footer class="flex items-center justify-between gap-4 text-muted">
-                </footer>
             </main>
         </div>
     </body>
